@@ -1,7 +1,17 @@
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Graphics;
 
-public class OvalDrawPlus {
+public class OvalDrawPlus extends JPanel {
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        g.setColor(Color.GREEN);
+
+        g.fillOval(0, 0, getWidth(), getHeight());
+    }
 
     public static void main(String[] args) {
 
@@ -13,9 +23,7 @@ public class OvalDrawPlus {
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel text = new JLabel("Oval Draw Plus", JLabel.CENTER);
-
-        window.add(text);
+        window.add(new OvalDrawPlus());
 
         window.setVisible(true);
     }
