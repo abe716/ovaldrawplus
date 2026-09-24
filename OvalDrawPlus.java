@@ -1,33 +1,6 @@
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.awt.Color;
-import java.awt.Graphics;
 
-
-
-
-public class OvalDrawPlus extends JPanel {
-
-    
-    static final Color RECTANGLE_COLOR = new Color(0, 0, 139);
-
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
- 
-       
-       
-        // Draws background rectangle
-        g.setColor(RECTANGLE_COLOR);
-        g.fillRect(0, 0, getWidth(), getHeight());
-
-
-         // Draw the green oval
-        g.setColor(Color.GREEN);
-        g.fillOval(0, 0, getWidth(), getHeight());
-
-       
-    }
-
+public class OvalDrawPlus {
     public static void main(String[] args) {
 
         System.out.println("Starting OvalDrawPlus...");
@@ -36,15 +9,20 @@ public class OvalDrawPlus extends JPanel {
 
         window.setSize(400, 500);
 
-        window.setLocation(250, 150);
+        window.setLocation(0, 0);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
        
 
-        window.add(new OvalDrawPlus());
+        window.add(new OvalDrawPlusPanel());
 
         window.setVisible(true);
         System.out.println("Closing OvalDrawPlus...");
     }
+
 }
+
+
+
+    
