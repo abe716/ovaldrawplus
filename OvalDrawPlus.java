@@ -13,7 +13,7 @@ public class OvalDrawPlus extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        
+        // Draws background rectangle
         g.setColor(RECTANGLE_COLOR);
         g.fillRect(0, 0, getWidth(), getHeight());
 
